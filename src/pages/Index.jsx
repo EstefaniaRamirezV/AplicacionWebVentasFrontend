@@ -22,6 +22,9 @@ function Index() {
    return (
 
     <div className="bg-primary">
+      <head>
+        <meta name="google-site-verification" content="hXhTvfDoPOAAKVxh3yB0EHpfuj1TmujnfT5QB94eDhQ"/>
+      </head>
       <div id="layoutAuthentication">
         <div id="layoutAuthentication_content">
           <main>
