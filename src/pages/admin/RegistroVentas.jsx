@@ -30,7 +30,7 @@ const RegistroVentas = () => {
 
     const add_sales_db = () => {
         console.log(idSales_add + idProduct_add + description_add + cantidad_add + unit_cost_add + total_cost_add + fecha_add + idUsers_add + nombreCliente_add + nombreVendedor_add + state_add)
-        Axios.post('http://localhost:3001/api/v1/sales/add', {
+        Axios.post('https://mtg3.herokuapp.com/api/v1/sales/add', {
             idSales: idSales_add,
             idProduct: idProduct_add,
             description: description_add,

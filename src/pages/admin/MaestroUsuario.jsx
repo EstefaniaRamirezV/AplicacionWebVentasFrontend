@@ -41,7 +41,7 @@ const MaestroUsuario = () => {
    
 
     useEffect(() => {
-        Axios.get('http://localhost:3001/api/v1/users/list').then((res) =>{
+        Axios.get('https://mtg3.herokuapp.com/api/v1/users/list').then((res) =>{
           console.log(res.data.users)
           set_users(res.data.users)
         });
@@ -50,7 +50,7 @@ const MaestroUsuario = () => {
    
      const add_users_db = () => {
        console.log(idUsers_add + nombre_add + apellido_add + email_add + password_add + rol_add + state_add)
-       Axios.post('http://localhost:3001/api/v1/users/add',{
+       Axios.post('https://mtg3.herokuapp.com/api/v1/users/add',{
          idUsers: idUsers_add,
          nombre: nombre_add,
          apellido: apellido_add,
@@ -63,12 +63,12 @@ const MaestroUsuario = () => {
      }
    
      const delete_users = (_id) => {
-       Axios.delete('http://localhost:3001/api/v1/users/delete/' + _id)
+       Axios.delete('https://mtg3.herokuapp.com/api/v1/users/delete/' + _id)
        toast.warn('Eliminado')
      }
    
      const update_users = (_id) => {
-       Axios.put('http://localhost:3001/api/v1/users/update',{
+       Axios.put('https://mtg3.herokuapp.com/api/v1/users/update',{
          _id: _id,
          idUsers: idUsers_update,
          nombre: nombre_update,

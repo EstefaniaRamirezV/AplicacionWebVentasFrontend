@@ -35,7 +35,7 @@ const MaestroVentas = () => {
     const [sales, set_sales] = useState([])
 
     useEffect(() => {
-        Axios.get('http://localhost:3001/api/v1/sales/list').then((res) => {
+        Axios.get('https://mtg3.herokuapp.com/api/v1/sales/list').then((res) => {
             console.log(res.data.sales)
             set_sales(res.data.sales)
         });
@@ -44,12 +44,12 @@ const MaestroVentas = () => {
 
 
     const delete_sales = (_id) => {
-        Axios.delete('http://localhost:3001/api/v1/sales/delete/' + _id)
+        Axios.delete('https://mtg3.herokuapp.com/api/v1/sales/delete/' + _id)
         toast.warn('Eliminado')
     }
 
     const update_sales = (_id) => {
-        Axios.put('http://localhost:3001/api/v1/sales/update', {
+        Axios.put('https://mtg3.herokuapp.com/api/v1/sales/update', {
             _id: _id,
             idSales: idSales_update,
             idProduct: idProduct_update,
